@@ -17,3 +17,34 @@ for full_name in Names:
  print(f"Full Name: {full_name}")
  print(f"First Name: {first_name}")
  print(f"Last Name: {last_name}\n")
+
+ def format_name(name):
+    
+    name_parts = name.split()
+    
+    
+    Names = [
+    "Lorde",
+    "Billie Eilish",
+    "Megan Thee Stallion"
+]
+
+def format_name(full_name):
+    name_parts = full_name.split()
+    
+    if len(name_parts) == 1:
+        return f"Name: {name_parts[0]}"
+    elif len(name_parts) == 2:
+        first_name, last_name = name_parts
+        return f"First Name: {first_name}, Last Name: {last_name}"
+    elif len(name_parts) == 3:
+        first_name, middle_name, last_name = name_parts
+        return f"First Name: {first_name}, Middle Name: {middle_name}, Last Name: {last_name}"
+    else:
+        return "Invalid name format"
+
+for full_name in Names:
+    formatted_name = format_name(full_name)
+    print(f"Full Name: {full_name}")
+    print(formatted_name)
+    print()
